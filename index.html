@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>กรรวี ศิริขันธ์ (แพรว) — Business Analyst @ INET</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/inet_logo.svg">
+</head>
+<body>
+
+  <!-- Liquid Aurora Background -->
+  <div class="mesh-bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+
+  <!-- Cursor Spotlight Overlay -->
+  <div id="cursorSpotlight" aria-hidden="true"></div>
+
+  <!-- Ambient Particle Canvas -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- ========================================================================
+       TOP STICKY APP NAVBAR
+       ======================================================================== -->
+  <header class="deck-top-navbar">
+    <div class="top-brand-area">
+      <img src="assets/inet_logo.svg" alt="INET Logo" class="top-inet-logo">
+      <div class="top-brand-divider"></div>
+      <span class="top-brand-subtitle">Business Analyst Interview</span>
+    </div>
+
+    <!-- Active Slide Title Indicator -->
+    <div class="top-center-pill">
+      <span class="top-slide-num-badge" id="topSlideBadge">01 / 07</span>
+      <span class="top-slide-title-label" id="topSlideTitle">หน้าแรก (Cover)</span>
+    </div>
+
+    <div class="top-right-group">
+      <!-- Language Switch (TH / EN) -->
+      <div class="lang-switch" id="langSwitch" data-lang="th" role="group" aria-label="Language">
+        <span class="lang-switch-thumb" aria-hidden="true"></span>
+        <button class="lang-opt active" data-lang="th" aria-pressed="true">TH</button>
+        <button class="lang-opt" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- Candidate Chip -->
+      <div class="candidate-profile-chip">
+        <div class="candidate-mini-avatar" data-en="K">ก</div>
+        <span class="candidate-chip-name" data-en="Kornravee Sirikhan (Praew)">กรรวี ศิริขันธ์ (แพรว)</span>
+      </div>
+    </div>
+
+    <!-- Continuous Progress Fill at Header Bottom -->
+    <div class="header-progress-track">
+      <div class="header-progress-fill" id="headerProgressFill"></div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HORIZONTAL SLIDE TRACK (เลื่อนขวาไปเรื่อยๆ)
+       ======================================================================== -->
+  <main class="horizontal-deck-track" id="deckTrack">
+
+    <!-- SLIDE 1: COVER (HERO & 3D ETHEREAL ORB) -->
+    <section class="h-slide slide-active" id="slide-1" data-index="1" data-title="หน้าแรก (Cover)" data-title-en="Cover">
+      <div class="slide-inner-stage">
+
+        <div class="slide-header-strip">
+          <span class="slide-tag-label">01 &bull; CANDIDATE PROFILE</span>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">INET RECRUITMENT 2025-2026</span>
+        </div>
+
+        <div class="slide-body-viewport">
+          <div class="cover-two-columns">
+            <div class="cover-left-info">
+
+              <!-- Role badge -->
+              <div class="cover-role-badge">
+                <span class="cover-role-dot"></span>
+                <span>Business Analyst Candidate</span>
+              </div>
+
+              <h1 class="cover-greeting-huge" data-en="
+                Kornravee Sirikhan&lt;br&gt;
+                &lt;span class=&quot;gradient-text&quot;&gt;( Praew )&lt;/span&gt;
+              ">
+                กรรวี ศิริขันธ์<br>
+                <span class="gradient-text">( แพรว )</span>
+              </h1>
+
+              <!-- Tagline -->
+              <p class="cover-tagline">
+                Computer Science &bull; Kasetsart University &bull; GPAX 3.03<br>
+                <span style="color: var(--inet-primary); font-weight: 600;">BA Co-op @ WHP Global &nbsp;·&nbsp; Transformer NLP Research</span>
+              </p>
+
+              <!-- CTA row: start presentation + status meta -->
+              <div class="cover-cta-row">
+                <button class="cover-cta-btn" onclick="app.nextSlide()">
+                  <span class="cover-cta-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </span>
+                  <span data-en="Start Presentation">เริ่มดู Presentation</span>
+                </button>
+                <div class="cover-cta-meta">
+                  <span class="cover-cta-meta-label"><span class="meta-dot"></span><span data-en="Ready to interview">พร้อมสัมภาษณ์งาน</span></span>
+                  <span class="cover-cta-meta-value">30 OCT 2025</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="cover-right-graphic">
+              <div class="orb-blur-ambient-1"></div>
+              <div class="orb-blur-ambient-2"></div>
+              
+              <div class="orb-3d-glowing"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
+          <span>30 OCTOBER 2025 &bull; INET INTERVIEW</span>
+          <span style="display:flex;align-items:center;gap:6px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <span data-en="Press → or scroll to see the next slide">กดปุ่ม → หรือเลื่อนล้อเพื่อดูสไลด์ถัดไป</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- SLIDE 2: TIMELINE -->
+    <section class="h-slide" id="slide-2" data-index="2" data-title="Timeline">
+      <div class="slide-inner-stage">
+
+        <div class="slide-header-strip">
+          <span class="slide-tag-label">02 &bull; TIMELINE</span>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--inet-primary); font-weight: 700;">2022 — 2026</span>
+        </div>
+
+        <div class="slide-body-viewport">
+          <div style="margin-bottom: 24px;">
+            <h2 class="slide-main-title" data-en="Education &amp;amp; Key Milestones">ประวัติการศึกษาและก้าวสำคัญ</h2>
+            <p class="slide-subtitle-desc" data-en="From Computer Science student to hands-on experience as a Business Analyst">การเดินทางจากนิสิตวิทยาการคอมพิวเตอร์ สู่ประสบการณ์จริงในบทบาท Business Analyst</p>
+          </div>
+
+          <div class="timeline-curve-wrap">
+            <svg class="timeline-curve-svg" viewBox="0 0 1000 320" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="timelineGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#24886C" stop-opacity="0"/>
+                  <stop offset="10%" stop-color="#24886C"/>
+                  <stop offset="50%" stop-color="#30C488"/>
+                  <stop offset="90%" stop-color="#5CBC4E"/>
+                  <stop offset="100%" stop-color="#5CBC4E" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M 0 212 C 60 210, 100 215, 130 215 C 220 218, 320 240, 460 180 C 580 125, 640 26, 770 26 C 860 26, 920 36, 1000 28"
+                    stroke="url(#timelineGrad)" stroke-width="8" fill="none" stroke-linecap="round"/>
+            </svg>
+
+            <!-- Node 1: University — label above -->
+            <div class="timeline-label" style="left: 10%; top: 14%; width: 27%;">
+              <div class="timeline-label-year">2022 — 2026</div>
+              <h3 class="timeline-label-title" data-en="Kasetsart University">มหาวิทยาลัยเกษตรศาสตร์</h3>
+              <p class="timeline-label-desc" data-en="Faculty of Science, Computer Science &amp;middot; GPAX 3.03">คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์ &middot; GPAX 3.03</p>
+            </div>
+            <div class="timeline-node" style="left: 13%; top: 67.2%;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path>
+                <path d="M22 10v6"></path>
+                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+              </svg>
+            </div>
+
+            <!-- Node 2: Co-op (current) — label below -->
+            <div class="timeline-node timeline-node-active" style="left: 46%; top: 56.3%;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="20" height="14" x="2" y="7" rx="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div class="timeline-label" style="left: 43%; top: 70%; width: 28%;">
+              <div class="timeline-label-year" data-en="2025 (6 months)">2025 (6 เดือน)</div>
+              <h3 class="timeline-label-title" data-en="Cooperative Education (Co-op)">สหกิจศึกษา (Co-op)</h3>
+              <p class="timeline-label-desc">Business Analyst @ WHP Global Solution Service</p>
+            </div>
+
+            <!-- Node 3: Final Project — label below -->
+            <div class="timeline-node" style="left: 77%; top: 8.1%;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+              </svg>
+            </div>
+            <div class="timeline-label" style="left: 74%; top: 24%; width: 24%;">
+              <div class="timeline-label-year">2026</div>
+              <h3 class="timeline-label-title">Final Project</h3>
+              <p class="timeline-label-desc" data-en="Aspect-based sentiment analysis of skincare reviews with a Transformer model">วิเคราะห์ความคิดเห็นรีวิวสกินแคร์ด้วย Transformer Model</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+          <span>ACADEMIC &amp; WORK PATH</span>
+          <span data-en="Slide 02 / 07">สไลด์ 02 / 07</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: COOPERATIVE EDUCATION (WHP GLOBAL) -->
+    <section class="h-slide" id="slide-3" data-index="3" data-title="สหกิจศึกษา (Co-op)" data-title-en="Co-op">
+      <div class="slide-inner-stage">
+
+        <div class="slide-header-strip">
+          <span class="slide-tag-label">03 &bull; COOPERATIVE EDUCATION</span>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--inet-primary); font-weight: 700;">WHP GLOBAL SOLUTION SERVICE</span>
+        </div>
+
+        <div class="slide-body-viewport">
+          <div style="margin-bottom: 20px;">
+            <h2 class="slide-main-title">Business Analyst @ WHP Global Solution Service</h2>
+            <p class="slide-subtitle-desc" data-en="6-month co-op &amp;bull; 4 key responsibilities">สหกิจศึกษา 6 เดือนเต็ม &bull; 4 บทบาทรับผิดชอบหลัก (Key Responsibilities)</p>
+          </div>
+
+          <div class="coop-4-pillars-grid">
+            <div class="coop-pillar-item">
+              <div class="pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4 class="pillar-title-text">Requirement Analysis</h4>
+                <p class="pillar-desc-text" data-en="Analyzed client requirements and prepared a &lt;strong&gt;Function Listing&lt;/strong&gt; to define system scope">วิเคราะห์ความต้องการของลูกค้าและจัดทำ <strong>Function Listing</strong> เพื่อกำหนดขอบเขตระบบ</p>
+              </div>
+            </div>
+
+            <div class="coop-pillar-item">
+              <div class="pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4 class="pillar-title-text">Process &amp; UI Design</h4>
+                <p class="pillar-desc-text" data-en="Designed &lt;strong&gt;User Flows&lt;/strong&gt; and &lt;strong&gt;Wireframes&lt;/strong&gt; to communicate workflows and align the client with the development team">ออกแบบ <strong>User Flow</strong> และ <strong>Wireframe</strong> เพื่อสื่อสารแนวทางการทำงานและสร้างความเข้าใจร่วมกันระหว่างลูกค้าและทีมพัฒนา</p>
+              </div>
+            </div>
+
+            <div class="coop-pillar-item">
+              <div class="pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4 class="pillar-title-text">System Testing</h4>
+                <p class="pillar-desc-text" data-en="Wrote &lt;strong&gt;Test Cases&lt;/strong&gt; for &lt;strong&gt;UAT&lt;/strong&gt; to verify that functions work correctly">จัดทำ <strong>Test Case</strong> สำหรับทดสอบระบบแบบ <strong>UAT</strong> เพื่อตรวจสอบความถูกต้องของฟังก์ชัน</p>
+              </div>
+            </div>
+
+            <div class="coop-pillar-item">
+              <div class="pillar-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4 class="pillar-title-text">Project Coordination</h4>
+                <p class="pillar-desc-text" data-en="Prepared the &lt;strong&gt;Project Plan&lt;/strong&gt; to set timelines and the order of work">จัดทำ <strong>Project Plan</strong> เพื่อกำหนดระยะเวลาและลำดับขั้นตอนการทำงาน</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+          <span>6-MONTH BA EXPERIENCE</span>
+          <span data-en="Slide 03 / 07">สไลด์ 03 / 07</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: FINAL PROJECT -->
+    <section class="h-slide" id="slide-4" data-index="4" data-title="Final Project">
+      <div class="slide-inner-stage">
+
+        <div class="slide-header-strip">
+          <span class="slide-tag-label">04 &bull; FINAL PROJECT</span>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--inet-primary); font-weight: 700;">TRANSFORMER MODEL</span>
+        </div>
+
+        <div class="slide-body-viewport">
+          <div style="margin-bottom: 16px;">
+            <h2 class="slide-main-title" data-en="Aspect-Based Sentiment Analysis of Skincare &amp;amp; Cosmetics Reviews with a Transformer Model">วิเคราะห์ความคิดเห็นจากรีวิวสกินแคร์และเครื่องสำอางด้วย Transformer Model</h2>
+          </div>
+
+          <div class="final-project-stage-grid">
+            <div class="final-project-left">
+              <div style="font-weight: 700; color: var(--text-main); font-size: 14px;">Project Contributions:</div>
+              <ul class="final-bullets-clean">
+                <li data-en="Collected, prepared and labeled &lt;strong&gt;15,905&lt;/strong&gt; Thai-language reviews">รวบรวม จัดเตรียมและติดป้ายกำกับข้อมูลรีวิวภาษาไทย จำนวน <strong>15,905 รายการ</strong></li>
+                <li data-en="Analyzed sentiment across &lt;strong&gt;10 aspects&lt;/strong&gt; such as results, price, texture and delivery">วิเคราะห์ความคิดเห็น <strong>10 ด้าน</strong> เช่น ผลลัพธ์ ราคา เนื้อสัมผัส และการจัดส่ง</li>
+                <li data-en="Fine-tuned and compared the performance of 3 Thai language models">ทดลอง Fine-tuning และเปรียบเทียบประสิทธิภาพโมเดลภาษาไทย 3 โมเดล</li>
+              </ul>
+
+              <div class="final-results-highlight-box">
+                <div>
+                  <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-muted);">MODEL PERFORMANCE</div>
+                  <div style="font-size: 13px; font-weight: 600; color: var(--text-main);" data-en="Best-performing model:">โมเดลที่มีประสิทธิภาพดีที่สุด:</div>
+                </div>
+                <div style="text-align: right;">
+                  <span class="results-metric-num">Accuracy 94.12%</span><br>
+                  <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--text-secondary);">Macro F1-Score 79.41%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="final-diagram-wrapper">
+              <img src="assets/final_project_diagram.png" alt="PhayaThai Model Training Loss Curve" class="final-diagram-img">
+            </div>
+          </div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+          <span>AI / NLP SENTIMENT RESEARCH</span>
+          <span data-en="Slide 04 / 07">สไลด์ 04 / 07</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: ADDITIONAL PROJECTS -->
+    <section class="h-slide" id="slide-5" data-index="5" data-title="Additional Projects">
+      <div class="slide-inner-stage">
+
+        <div class="slide-header-strip">
+          <span class="slide-tag-label">05 &bull; ADDITIONAL PROJECTS</span>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--inet-primary); font-weight: 700;">SYSTEM INTEGRATION &amp; ERP</span>
+        </div>
+
+        <div class="slide-body-viewport">
+          <div style="margin-bottom: 20px;">
+            <h2 class="slide-main-title" data-en="Additional Projects">โปรเจกต์เพิ่มเติม (Additional Projects)</h2>
+            <p class="slide-subtitle-desc" data-en="Applying cloud services and simulating enterprise management systems">การประยุกต์ใช้งานคลาวด์และจำลองระบบบริหารจัดการระดับองค์กร</p>
+          </div>
+
+          <div class="two-projects-grid">
+            <div class="project-card-box">
+              <span class="project-card-badge">CLOUD &amp; LINE API</span>
+              <h3 class="project-card-title">Nong Plodpai Chatbot</h3>
+              <ul class="final-bullets-clean">
+                <li data-en="Designed and built a Q&amp;amp;A dataset on contraception methods, side effects, costs and service locations">ออกแบบและจัดทำชุดข้อมูลคำถาม – คำตอบเกี่ยวกับวิธีคุมกำเนิด ผลข้างเคียง ค่าใช้จ่าย และสถานที่ให้บริการ</li>
+                <li data-en="Built a model that classifies user questions into &lt;strong&gt;29 categories&lt;/strong&gt; so the chatbot answers on point">พัฒนาโมเดลเพื่อแยกประเภทคำถามของผู้ใช้ <strong>29 ประเภท</strong> เพื่อให้แชตบอตตอบคำถามได้ตรงประเด็น</li>
+                <li data-en="Deployed the model to the &lt;strong&gt;Cloud&lt;/strong&gt; and connected it to &lt;strong&gt;LINE&lt;/strong&gt; for real-time conversations">นำโมเดลขึ้น <strong>Cloud</strong> และเชื่อมต่อกับ <strong>LINE</strong> เพื่อให้แชตบอตสามารถโต้ตอบกับผู้ใช้ได้แบบเรียลไทม์</li>
+              </ul>
+            </div>
+
+            <div class="project-card-box">
+              <span class="project-card-badge">ERP WORKFLOW &amp; BEECY</span>
+              <h3 class="project-card-title">ERP Analysis for ThaiNamthip</h3>
+              <ul class="final-bullets-clean">
+                <li data-en="Studied and analyzed ThaiNamthip&#x27;s business processes">ศึกษาและวิเคราะห์กระบวนการดำเนินธุรกิจของบริษัทไทยน้ำทิพย์</li>
+                <li data-en="Analyzed and selected ERP modules that fit the business workflows, such as purchasing, production and accounting">วิเคราะห์และเลือกโมดูล ERP ที่เหมาะสมกับกระบวนการทำงานของธุรกิจ เช่น จัดซื้อ การผลิต และบัญชี</li>
+                <li data-en="Designed an ERP mockup on the &lt;strong&gt;BEECY&lt;/strong&gt; platform to show how the whole system works">ออกแบบ Mockup ระบบ ERP ด้วยแพลตฟอร์ม <strong>BEECY</strong> เพื่อแสดงภาพรวมการทำงานของระบบ</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+          <span>LINE BOT &bull; THAINAMTHIP ERP</span>
+          <span data-en="Slide 05 / 07">สไลด์ 05 / 07</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: SKILLS -->
+    <section class="h-slide" id="slide-6" data-index="6" data-title="ทักษะ (Skills)" data-title-en="Skills">
+      <div class="slide-inner-stage">
+
+        <div class="slide-header-strip">
+          <span class="slide-tag-label">06 &bull; SKILLS MATRIX</span>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--inet-primary); font-weight: 700;">COMPETENCIES</span>
+        </div>
+
+        <div class="slide-body-viewport">
+          <div style="margin-bottom: 22px;">
+            <h2 class="slide-main-title" data-en="Skills &amp;amp; Competencies">ทักษะและความสามารถ (Skills)</h2>
+            <p class="slide-subtitle-desc" data-en="A blend of systems analysis, technical tools and collaboration skills">การผสมผสานระหว่างการวิเคราะห์ระบบ เครื่องมือเชิงเทคนิค และทักษะการทำงานร่วมกับผู้อื่น</p>
+          </div>
+
+          <div class="skills-3-cols-grid">
+            <div class="skill-category-card">
+              <h4 class="skill-cat-header-title">Business &amp; System Analysis</h4>
+              <div class="skill-pill-tags">
+                <span class="skill-tag-chip" data-en="Requirements Analysis">การวิเคราะห์ความต้องการของระบบ</span>
+                <span class="skill-tag-chip" data-en="Business Process Analysis">วิเคราะห์กระบวนการทำงาน</span>
+                <span class="skill-tag-chip" data-en="User Flow Design">ออกแบบ User Flow</span>
+                <span class="skill-tag-chip" data-en="Wireframe Design">การออกแบบ Wireframe</span>
+                <span class="skill-tag-chip" data-en="System Testing (UAT)">การทดสอบระบบ (UAT)</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <h4 class="skill-cat-header-title">Technical Skills</h4>
+              <div class="skill-pill-tags">
+                <span class="skill-tag-chip">Python</span>
+                <span class="skill-tag-chip">SQL</span>
+                <span class="skill-tag-chip">Tableau</span>
+                <span class="skill-tag-chip">Excel</span>
+                <span class="skill-tag-chip">Figma</span>
+                <span class="skill-tag-chip">Draw.io</span>
+              </div>
+            </div>
+
+            <div class="skill-category-card">
+              <h4 class="skill-cat-header-title">Soft Skills</h4>
+              <div class="skill-pill-tags">
+                <span class="skill-tag-chip" data-en="Analytical Thinking &amp;amp; Problem Solving">การคิดวิเคราะห์และแก้ไขปัญหา</span>
+                <span class="skill-tag-chip" data-en="Communication &amp;amp; Coordination">การสื่อสารและประสานงาน</span>
+                <span class="skill-tag-chip" data-en="Teamwork">การทำงานเป็นทีม</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+          <span>CORE STRENGTHS</span>
+          <span data-en="Slide 06 / 07">สไลด์ 06 / 07</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: Q & A -->
+    <section class="h-slide" id="slide-7" data-index="7" data-title="Q &amp; A">
+      <div class="slide-inner-stage">
+
+        <div class="slide-header-strip">
+          <span class="slide-tag-label">07 &bull; Q &amp; A</span>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--inet-primary); font-weight: 700;">QUESTION &amp; ANSWER</span>
+        </div>
+
+        <div class="slide-body-viewport">
+          <div class="qa-scene">
+            <div class="qa-orb" aria-hidden="true"></div>
+            <span class="qa-eyebrow"><span class="qa-eyebrow-dot"></span>Thank you</span>
+            <h2 class="qa-title">Q&amp;A</h2>
+          </div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between;">
+          <span>INET INTERVIEW PRESENTATION</span>
+          <span data-en="Slide 07 / 07">สไลด์ 07 / 07</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       BOTTOM FIXED CONTROLS & THUMBNAIL STEPPER
+       ======================================================================== -->
+  <footer class="deck-bottom-navbar">
+    <button class="nav-arrow-control" id="prevSlideBtn" onclick="app.prevSlide()" title="สไลด์ก่อนหน้า (Arrow Left)" data-en-title="Previous slide (Arrow Left)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <!-- 7 Horizontal Stepper Pills -->
+    <div class="bottom-dots-stepper" id="stepperContainer">
+      <!-- Generated via JS -->
+    </div>
+
+    <button class="nav-arrow-control" id="nextSlideBtn" onclick="app.nextSlide()" title="สไลด์ถัดไป (Arrow Right / Space)" data-en-title="Next slide (Arrow Right / Space)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/effects.js"></script>
+</body>
+</html>

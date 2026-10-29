@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1813"/>
+      <stop offset="50%" stop-color="#142B23"/>
+      <stop offset="100%" stop-color="#1B3F33"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCECE2"/>
+      <stop offset="100%" stop-color="#EED4C4"/>
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231F20"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="jacketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3830"/>
+      <stop offset="100%" stop-color="#11221D"/>
+    </linearGradient>
+    <linearGradient id="accentTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#33C98D"/>
+      <stop offset="100%" stop-color="#29D3BF"/>
+    </linearGradient>
+    <linearGradient id="idBadgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#33C98D"/>
+      <stop offset="100%" stop-color="#8DC63F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="480" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Tech Grid Lines -->
+  <path d="M0 80 H400 M0 160 H400 M0 240 H400 M0 320 H400 M0 400 H400" stroke="#33C98D" stroke-opacity="0.08" stroke-width="1"/>
+  <path d="M80 0 V480 M160 0 V480 M240 0 V480 M320 0 V480" stroke="#33C98D" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- Halo Glow Behind Candidate -->
+  <circle cx="200" cy="210" r="140" fill="#33C98D" fill-opacity="0.12" filter="blur(30px)"/>
+
+  <!-- Back Hair -->
+  <path d="M120 180 C110 280 125 350 140 380 C150 400 250 400 260 380 C275 350 290 280 280 180 Z" fill="url(#hairGrad)"/>
+
+  <!-- Neck -->
+  <rect x="180" y="230" width="40" height="70" rx="10" fill="url(#skinGrad)"/>
+
+  <!-- Shoulders & Smart Casual Jacket -->
+  <path d="M70 480 L100 340 C115 315 155 305 180 315 L200 328 L220 315 C245 305 285 315 300 340 L330 480 Z" fill="url(#jacketGrad)"/>
+  
+  <!-- Inner Blouse / Top -->
+  <path d="M180 320 L200 390 L220 320 Z" fill="#F4FBF7"/>
+
+  <!-- Lapels -->
+  <path d="M130 325 L185 410 L195 330 Z" fill="#284A40"/>
+  <path d="M270 325 L215 410 L205 330 Z" fill="#284A40"/>
+
+  <!-- Head Base -->
+  <ellipse cx="200" cy="195" rx="68" ry="82" fill="url(#skinGrad)"/>
+
+  <!-- Ears -->
+  <ellipse cx="132" cy="198" rx="8" ry="14" fill="#F5DACB"/>
+  <ellipse cx="268" cy="198" rx="8" ry="14" fill="#F5DACB"/>
+  <!-- Elegant Earrings -->
+  <circle cx="132" cy="208" r="3" fill="#33C98D"/>
+  <circle cx="268" cy="208" r="3" fill="#33C98D"/>
+
+  <!-- Hair Front (Modern Sleek Bob / Long Straight Hair with bangs parted) -->
+  <path d="M132 180 C130 110 160 85 200 85 C240 85 270 110 268 180 C265 145 250 115 200 115 C150 115 135 145 132 180 Z" fill="url(#hairGrad)"/>
+  <!-- Side strands framing face -->
+  <path d="M132 170 C130 230 142 270 148 290 C143 270 137 220 140 180 Z" fill="#1A1718"/>
+  <path d="M268 170 C270 230 258 270 252 290 C257 270 263 220 260 180 Z" fill="#1A1718"/>
+
+  <!-- Eyebrows -->
+  <path d="M160 168 Q175 162 188 168" stroke="#3A2D28" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M240 168 Q225 162 212 168" stroke="#3A2D28" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Eyes with friendly intelligent look -->
+  <ellipse cx="174" cy="182" rx="9" ry="5.5" fill="#231F20"/>
+  <circle cx="176" cy="180" r="2.2" fill="#FFFFFF"/>
+  <ellipse cx="226" cy="182" rx="9" ry="5.5" fill="#231F20"/>
+  <circle cx="228" cy="180" r="2.2" fill="#FFFFFF"/>
+
+  <!-- Nose -->
+  <path d="M200 180 L197 205 Q200 209 203 205" stroke="#D8B5A2" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- Warm Confident Smile -->
+  <path d="M185 224 Q200 238 215 224" stroke="#C45858" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Chic Tech Glass / Camera Lens Flare Accent -->
+  <circle cx="295" cy="120" r="28" fill="none" stroke="url(#accentTeal)" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+  <circle cx="295" cy="120" r="4" fill="#33C98D"/>
+
+  <!-- Candidate Badge Overlay at bottom -->
+  <g transform="translate(40, 420)">
+    <rect width="320" height="42" rx="21" fill="#0E211A" stroke="#33C98D" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect x="12" y="10" width="22" height="22" rx="11" fill="url(#idBadgeGrad)"/>
+    <text x="23" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="900" fill="#0A1813" text-anchor="middle">BA</text>
+    <text x="45" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">KORNRAWEE S. (PRAEW)</text>
+    <text x="45" y="33" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="500" fill="#33C98D">KU COMPUTER SCIENCE · BA CANDIDATE</text>
+    <text x="290" y="26" font-family="'Space Grotesk', monospace" font-size="10" font-weight="600" fill="#8DC63F" text-anchor="end">EST 2026</text>
+  </g>
+</svg>
