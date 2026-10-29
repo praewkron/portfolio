@@ -1548,6 +1548,10 @@ body {
 
 /* Print Styles */
 @media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
   body {
     overflow: visible !important;
     background: #FFFFFF !important;
