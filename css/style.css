@@ -1489,112 +1489,60 @@ body {
 }
 
 /* Arrow Nav Buttons */
-.nav-arrow-control {
-  width: 38px;
-  height: 38px;
+.nav-btn, .nav-arrow-control {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 1px solid var(--border-light);
+  border: 1px solid #cfe6dc;
+  background: transparent;
   color: var(--text-main);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition);
+  transition: all .25s;
 }
 
-.nav-arrow-control:hover {
-  background: var(--inet-primary);
-  border-color: var(--inet-primary);
-  color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(28, 138, 100, 0.16);
+.nav-btn:hover:not(:disabled), .nav-arrow-control:hover:not(:disabled) {
+  border-color: #1d8f66;
+  color: #1d8f66;
+  background: rgba(29, 143, 102, 0.08);
   transform: scale(1.05);
 }
 
-.nav-arrow-control:disabled {
-  opacity: 0.35;
+.nav-btn:disabled, .nav-arrow-control:disabled {
+  opacity: .35;
+  cursor: not-allowed;
   pointer-events: none;
 }
 
-/* Horizontal Dot / Thumbnail Stepper */
+/* Horizontal Dot Stepper */
 .bottom-dots-stepper {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.step-indicator-pill {
-  height: 30px;
-  padding: 0 14px;
-  border-radius: var(--radius-full);
-  background: #FFFFFF;
-  border: 1px solid var(--border-subtle);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #b7dccb;
+  border: none;
+  outline: none;
+  padding: 0;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: all .25s;
 }
 
-.step-indicator-pill:hover {
-  border-color: var(--inet-primary-light);
-  color: var(--inet-primary);
+.dot.active {
+  width: 28px;
+  background: #1d8f66;
 }
 
-.step-indicator-pill.active {
-  background: var(--inet-primary);
-  border-color: var(--inet-primary);
-  color: #FFFFFF;
-  box-shadow: 0 4px 12px rgba(28, 138, 100, 0.16);
-}
-
-.step-indicator-pill.active .step-dot-mini {
-  background: var(--inet-lime);
-}
-
-.step-dot-mini {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-/* JS-generated stepper pills */
-.stepper-pill {
-  height: 30px;
-  min-width: 30px;
-  padding: 0 14px;
-  border-radius: var(--radius-full);
-  background: #FFFFFF;
-  border: 1px solid var(--border-subtle);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.stepper-pill:hover {
-  border-color: var(--inet-primary-light);
-  color: var(--inet-primary);
-  transform: scale(1.08);
-}
-
-.stepper-pill.active {
-  background: var(--inet-primary);
-  border-color: var(--inet-primary);
-  color: #FFFFFF;
-  box-shadow: 0 4px 12px rgba(28, 138, 100, 0.16);
-  transform: scale(1.12);
+.dot:hover:not(.active) {
+  background: #8bc9b0;
+  transform: scale(1.15);
 }
 
 

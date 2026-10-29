@@ -58,7 +58,7 @@ class InterviewDashboardApp {
     }
 
     if (this.stepperContainer) {
-      this.stepperContainer.querySelectorAll('.stepper-pill').forEach((pill, i) => {
+      this.stepperContainer.querySelectorAll('.dot, .stepper-pill').forEach((pill, i) => {
         pill.title = this.slideTitle(this.slides[i]) || `Slide ${i + 1}`;
       });
     }
@@ -103,7 +103,7 @@ class InterviewDashboardApp {
     this.stepperContainer.innerHTML = '';
     this.slides.forEach((slide, i) => {
       const pill = document.createElement('button');
-      pill.className = 'stepper-pill';
+      pill.className = 'dot';
       pill.dataset.index = i + 1;
       pill.title = slide.dataset.title || `Slide ${i + 1}`;
       pill.addEventListener('click', () => this.goToSlide(i + 1));
@@ -158,9 +158,9 @@ class InterviewDashboardApp {
     if (this.headerProgress)
       this.headerProgress.style.width = `${pct}%`;
 
-    // Stepper pills
+    // Stepper dots
     if (this.stepperContainer) {
-      this.stepperContainer.querySelectorAll('.stepper-pill').forEach((pill, i) => {
+      this.stepperContainer.querySelectorAll('.dot, .stepper-pill').forEach((pill, i) => {
         pill.classList.toggle('active', i + 1 === n);
       });
     }
